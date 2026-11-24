@@ -1,0 +1,102 @@
+/* Paste your exact Figma values here */
+:root {
+  --font: "IBM Plex Mono", monospace;
+  --ink: #000;
+  --accent: #e00000;
+  --card-bg: rgba(214, 214, 214, 0.92);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: var(--font);
+}
+
+/* Map fills the whole window */
+#map {
+  position: fixed;
+  inset: 0;
+}
+
+/* Make the basemap fully grey */
+.leaflet-tile-pane { filter: grayscale(1); }
+
+/* Info card, top-left, above the map */
+#card {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 1000;
+  width: 455px;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: 28px 26px 22px;
+  background: var(--card-bg);
+  border-radius: 22px;
+}
+
+#card-name {
+  margin: 0 0 18px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.pill {
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 15px;
+}
+
+#card-notes {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+#card-homes {
+  margin: 0;
+  color: var(--accent);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* Slider panel, bottom-left */
+#filter {
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  z-index: 1000;
+  width: 455px;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: 18px 26px;
+  background: var(--card-bg);
+  border-radius: 22px;
+  font-size: 15px;
+}
+
+#filter-label {
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: -0.05em;   /* tighter spacing */
+  white-space: nowrap;       /* keep it on one line */
+}
+
+#filter-label .num {
+  color: var(--accent);      /* numbers in red */
+}
+
+#homes-slider {
+  width: 100%;
+  accent-color: var(--ink);   /* black slider to match the dots */
+  cursor: pointer;
+}

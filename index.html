@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malaysia Data Centers</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Leaflet (the map library) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- The map fills this div -->
+  <div id="map"></div>
+
+  <!-- The info card -->
+  <aside id="card">
+    <h1 id="card-name"></h1>
+    <div class="pills">
+      <span class="pill" id="card-status"></span>
+      <span class="pill" id="card-location"></span>
+    </div>
+    <p id="card-notes"></p>
+    <p id="card-homes"></p>
+  </aside>
+
+  <!-- The slider (bottom-left) -->
+  <div id="filter">
+    <label for="homes-slider" id="filter-label"></label>
+    <input type="range" id="homes-slider" min="0" max="1000000" step="50000" value="0">
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
